@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <h1 class="h3 text-center mt-3 mb-5">Juros simples</h1>
+
+  <div class="mb-3">
+    <label for="emprestimo" class="form-label">
+      INFORME VALOR EMPRÉSTIMO
+    </label>
+    <input type="number" class="form-control mb-3" id="exampleFormControlInput1" [(ngModel)]="valor">
+
+    <label for="tempo" class="form-label">
+      INFORME QUANTIDADE DE MESES
+    </label>
+    <input type="number" class="form-control mb-3" id="exampleFormControlInput1" [(ngModel)]="tempo"> 
+
+    <label for="juros" class="form-label">
+      INFORME JUROS (%)
+    </label>
+    <input type="number" class="form-control mb-3" id="exampleFormControlInput1" [(ngModel)]="juros">
+  </div>
+
+  <div *ngIf="jurosimples()">
+    VALOR TOTAL: <span class="fw-bold">{{total.toFixed(2)}}</span>
+  </div>
+
+</div>
